@@ -1,0 +1,7 @@
+hours=np.array([1,2,3,4,5]).reshape(-1,1)
+marks=np.array([10,20,30,40,50])
+plt.scatter(hours,marks)
+plt.xlabel("hours studies")
+plt.ylabel("marks")
+plt.title("study Hours vs marks")
+plt.show()
