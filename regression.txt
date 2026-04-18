@@ -1,0 +1,89 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+x=np.array([1,2,3,4,5]).reshape(-1,1)
+y=np.array([40,50,60,70,80])
+model=LinearRegression()
+model.fit(x,y)
+predicted_marks=model.predict([[6]])
+print("predicted marks for 6 hours:",predicted_marks[0])
+plt.scatter(x,y,color='blue')
+plt.plot(x,model.predict(x),color='red')
+plt.xlabel("Hours studied")
+plt.ylabel("Marks")
+plt.title("simple linear regression example")
+plt.show()
+
+
+
+
+
+
+
+
+another one same as above program
+
+
+
+import plotly.express as px
+df=px.data.iris()
+fig=px.line(df,x="species",y="petal_width")
+fig.show()
+
+
+
+import numpy as np
+hours=np.array([1,2,3,4,5,6,7,8])
+print("hours:",hours)
+print("shape",hours.reshape(-1,1))
+
+
+
+import numpy as np
+arr=np.array([1,2,3,4,5,6,7,8,9,10])
+new_arr=arr.reshape(5,2)
+print(new_arr)
+
+
+
+
+import numpy as np
+arr=np.array([1,2,3,4,5,6,7,8])
+new_arr=arr.reshape(-1,2)
+print(new_arr)
+
+
+
+step_1:
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+
+step_2:
+hours=np.array([1,2,3,4,5]).reshape(-1,1)
+marks=np.array([10,20,30,40,50])
+plt.scatter(hours,marks)
+plt.xlabel("hours studies")
+plt.ylabel("marks")
+plt.title("study Hours vs marks")
+plt.show()
+
+
+step_3:
+ob=LinearRegression()
+ob.fit(hours,marks)
+predicted_marks=ob.predict(hours)
+plt.scatter(hours,marks)
+plt.plot(hours,predicted_marks,color='red')
+plt.xlabel("hours studies")
+plt.ylabel("marks")
+plt.title("linear regression line")
+plt.show()
+
+
+step_4:
+new_hour=np.array([[6]])
+predicted=ob.predict(new_hour)
+print("predicted marks for 6 hours:",predicted[0])
